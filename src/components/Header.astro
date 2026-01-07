@@ -1,0 +1,70 @@
+---
+---
+
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 shadow-[0_4px_20px_rgba(62,55,252,0.1)]">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-3 group">
+        <img src="/Logotipo sin fondo.png" alt="RappiFact" class="h-auto w-[14em] transition-transform group-hover:scale-110 drop-shadow-[0_2px_8px_rgba(62,55,252,0.3)]" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#planes" class="text-[#010101] hover:text-[#3E37FC] transition-colors font-medium">Planes</a>
+        <a href="#funcionalidades" class="text-[#010101] hover:text-[#3E37FC] transition-colors font-medium">Funcionalidades</a>
+        <a href="#testimonios" class="text-[#010101] hover:text-[#3E37FC] transition-colors font-medium">Testimonios</a>
+        <a href="#faq" class="text-[#010101] hover:text-[#3E37FC] transition-colors font-medium">FAQ</a>
+        <a
+          href="https://rappifact.com/facturacionv9/registro"
+          target="_blank"
+          class="bg-gradient-to-r from-[#3E37FC] to-[#6B63FF] text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-[0_8px_25px_rgba(62,55,252,0.4)] transition-all hover:scale-105"
+        >
+          Prueba Nuestra Demo
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-[#010101] focus:outline-none p-2 hover:bg-[#3E37FC]/5 rounded-lg transition-colors">
+        <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden pt-4 pb-2 border-t border-gray-100 mt-4">
+      <div class="flex flex-col space-y-3">
+        <a href="#planes" class="text-[#010101] hover:text-[#3E37FC] hover:bg-[#3E37FC]/5 transition-colors font-medium py-3 px-4 rounded-lg">Planes</a>
+        <a href="#funcionalidades" class="text-[#010101] hover:text-[#3E37FC] hover:bg-[#3E37FC]/5 transition-colors font-medium py-3 px-4 rounded-lg">Funcionalidades</a>
+        <a href="#testimonios" class="text-[#010101] hover:text-[#3E37FC] hover:bg-[#3E37FC]/5 transition-colors font-medium py-3 px-4 rounded-lg">Testimonios</a>
+        <a href="#faq" class="text-[#010101] hover:text-[#3E37FC] hover:bg-[#3E37FC]/5 transition-colors font-medium py-3 px-4 rounded-lg">FAQ</a>
+        <a
+          href="https://wa.me/51916924141"
+          target="_blank"
+          class="bg-gradient-to-r from-[#3E37FC] to-[#6B63FF] text-white px-6 py-3 rounded-full font-semibold hover:shadow-[0_8px_25px_rgba(62,55,252,0.4)] transition-all text-center mt-2"
+        >
+          Comienza ahora
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>
+

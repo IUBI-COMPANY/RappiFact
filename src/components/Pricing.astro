@@ -1,0 +1,311 @@
+---
+export interface Plan {
+  name: string;
+  price: string;
+  oldPrice: string;
+  popular?: boolean;
+  comprobantes: string;
+  sucursales: string;
+  almacenes: string;
+  usuarios: string;
+  features: string[];
+  notIncluded: string[];
+}
+
+const plans: Plan[] = [
+  {
+    name: "Básico",
+    price: "120",
+    oldPrice: "152",
+    comprobantes: "1,000",
+    sucursales: "1",
+    almacenes: "1",
+    usuarios: "1",
+    features: [
+      "Módulo de ventas",
+      "Reportes básicos",
+      "Búsqueda de RUC y DNI",
+      "Duplicar y copiar documentos",
+    ],
+    notIncluded: [
+      "Módulo de compras",
+      "Búsqueda de comprobantes",
+      "Kardex",
+      "Guías de remisión",
+      "Libros electrónicos",
+      "API REST"
+    ]
+  },
+  {
+    name: "Emprendedor",
+    price: "160",
+    oldPrice: "200",
+    popular: true,
+    comprobantes: "3,000",
+    sucursales: "2",
+    almacenes: "2",
+    usuarios: "3",
+    features: [
+      "Todo lo del plan Básico",
+      "Módulo de compras",
+      "Búsqueda de comprobantes",
+      "Kardex físico y valorizado",
+      "Ingresos y salidas de almacén",
+    ],
+    notIncluded: [
+      "Traslado entre almacenes",
+      "Guías de remisión",
+      "Libros electrónicos",
+      "API REST",
+      "Dominio personalizado"
+    ]
+  },
+  {
+    name: "Empresarial",
+    price: "170",
+    oldPrice: "228",
+    comprobantes: "6,000",
+    sucursales: "Ilimitadas",
+    almacenes: "Ilimitados",
+    usuarios: "Ilimitados",
+    features: [
+      "Todo lo del plan Emprendedor",
+      "Reportes avanzados",
+      "Traslado entre almacenes",
+      "Guías de remisión",
+      "Libros electrónicos",
+      "API REST",
+      "Dominio personalizado",
+      "Integración con tienda virtual"
+    ],
+    notIncluded: []
+  }
+];
+
+// Calcular precios anuales (precio mensual x 12 con 25% de descuento)
+const calculateAnnualPrice = (monthlyPrice: string) => {
+  const monthly = parseFloat(monthlyPrice);
+  const annual = (monthly * 12) * 0.75; // 25% descuento
+  return annual.toFixed(0);
+};
+
+const calculateAnnualOldPrice = (monthlyOldPrice: string) => {
+  const monthly = parseFloat(monthlyOldPrice);
+  const annual = monthly * 12;
+  return annual.toFixed(0);
+};
+---
+
+<section id="planes" class="py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8 sm:mb-12 animate-fade-in-up">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#010101] mb-3 sm:mb-4">
+        Elige el <span class="italic">plan perfecto</span> para tu negocio
+      </h2>
+      <p class="text-lg sm:text-xl text-[#010101]/70 max-w-3xl mx-auto px-4">
+        <span class="italic">Sin contratos de permanencia.</span> Comienza hoy y cancela cuando quieras.
+      </p>
+
+      <!-- Switch Mensual/Anual -->
+      <div class="mt-8 flex items-center justify-center gap-4">
+        <span class="text-base sm:text-lg font-semibold text-[#010101]" id="monthly-label">Mensual</span>
+        <button
+          id="billing-toggle"
+          type="button"
+          class="relative inline-flex h-8 w-16 sm:h-10 sm:w-20 items-center rounded-full bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#3E37FC] focus:ring-offset-2"
+          role="switch"
+          aria-checked="false"
+          aria-labelledby="billing-toggle-label"
+        >
+          <span
+            id="billing-toggle-button"
+            class="inline-block h-6 w-6 sm:h-8 sm:w-8 transform rounded-full bg-white shadow-lg transition-transform duration-300 translate-x-1"
+          ></span>
+        </button>
+        <span class="text-base sm:text-lg font-semibold text-[#010101]/70" id="annual-label">
+          Anual
+          <span class="ml-2 inline-block bg-gradient-to-r from-[#3E37FC] to-[#6B63FF] text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+            -25%
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+      {plans.map((plan, index) => (
+        <div class={`pricing-card scroll-reveal relative rounded-3xl p-6 sm:p-8 border-2 transition-all duration-500 hover:-translate-y-3 hover:scale-105 ${
+          plan.popular 
+            ? 'border-[#3E37FC] shadow-[0_15px_60px_rgba(62,55,252,0.3)] sm:scale-105 bg-gradient-to-br from-[#3E37FC]/5 to-white animate-glow' 
+            : 'border-gray-200 hover:border-[#3E37FC]/50 hover:shadow-[0_10px_40px_rgba(62,55,252,0.15)] bg-white'
+        }`} style={`animation-delay: ${index * 150}ms`}>
+          {plan.popular && (
+            <div class="absolute -top-3 sm:-top-4 left-0 right-0 flex justify-center animate-bounce-slow">
+              <span class="bg-gradient-to-r from-[#3E37FC] to-[#6B63FF] text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-[0_4px_20px_rgba(62,55,252,0.4)] animate-pulse">
+                MÁS POPULAR
+              </span>
+            </div>
+          )}
+
+          <div class="text-center mb-4 sm:mb-6">
+            <h3 class="text-xl sm:text-2xl font-bold text-[#010101] mb-2">{plan.name}</h3>
+
+            <!-- Precio Mensual -->
+            <div class="price-monthly">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <span class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#3E37FC] to-[#6B63FF]">S/. {plan.price}</span>
+              </div>
+              <div class="text-sm sm:text-base text-[#010101]/60">
+                <span class="line-through">Antes S/. {plan.oldPrice}</span>
+              </div>
+              <div class="text-sm text-[#010101]/50 mt-1">por mes</div>
+            </div>
+
+            <!-- Precio Anual -->
+            <div class="price-annual hidden">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <span class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#3E37FC] to-[#6B63FF]">
+                  S/. {calculateAnnualPrice(plan.price)}
+                </span>
+              </div>
+              <div class="text-sm sm:text-base text-[#010101]/60">
+                <span class="line-through">Antes S/. {calculateAnnualOldPrice(plan.oldPrice)}</span>
+                <span class="ml-2 text-[#3E37FC] font-semibold">
+                  Ahorra 25%
+                </span>
+              </div>
+              <div class="text-sm text-[#010101]/50 mt-1">
+                por año (S/. {Math.round(parseFloat(calculateAnnualPrice(plan.price)) / 12)} / mes)
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 mb-6 pb-6 border-b border-gray-200">
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-[#010101]/60">Comprobantes:</span>
+              <span class="font-bold text-[#010101]">{plan.comprobantes}</span>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-[#010101]/60">Sucursales:</span>
+              <span class="font-bold text-[#010101]">{plan.sucursales}</span>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-[#010101]/60">Almacenes:</span>
+              <span class="font-bold text-[#010101]">{plan.almacenes}</span>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-[#010101]/60">Usuarios:</span>
+              <span class="font-bold text-[#010101]">{plan.usuarios}</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 mb-6">
+            {plan.features.map((feature) => (
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#3E37FC] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-[#010101]/80">{feature}</span>
+              </div>
+            ))}
+
+            {plan.notIncluded.length > 0 && (
+              <>
+                {plan.notIncluded.slice(0, 3).map((feature) => (
+                  <div class="flex items-start gap-3 opacity-50">
+                    <svg class="w-5 h-5 text-[#010101]/40 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm text-[#010101]/50">{feature}</span>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
+
+          <a
+            href={`https://wa.me/51916924141?text=Hola,%20quiero%20información%20sobre%20el%20plan%20${plan.name}`}
+            target="_blank"
+            class={`block w-full py-4 rounded-full font-bold text-center transition-all ${
+              plan.popular
+                ? 'bg-gradient-to-r from-[#3E37FC] to-[#6B63FF] text-white hover:shadow-[0_10px_40px_rgba(62,55,252,0.4)] hover:scale-105'
+                : 'bg-[#010101] text-white hover:bg-[#010101]/90 hover:shadow-[0_8px_30px_rgba(1,1,1,0.3)]'
+            }`}
+          >
+            Comienza ahora
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 text-center">
+      <p class="text-[#010101]/60 mb-4">
+        ¿Necesitas un plan personalizado para tu empresa?
+      </p>
+      <a
+        href="https://wa.me/51916924141?text=Hola,%20necesito%20un%20plan%20personalizado"
+        target="_blank"
+        class="inline-flex items-center gap-2 text-[#3E37FC] hover:text-[#6B63FF] font-semibold transition-colors"
+      >
+        Contáctanos para una cotización personalizada
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('billing-toggle');
+    const toggleButton = document.getElementById('billing-toggle-button');
+    const monthlyLabel = document.getElementById('monthly-label');
+    const annualLabel = document.getElementById('annual-label');
+    const monthlyPrices = document.querySelectorAll('.price-monthly');
+    const annualPrices = document.querySelectorAll('.price-annual');
+
+    let isAnnual = false;
+
+    const updatePricing = () => {
+      if (isAnnual) {
+        // Mostrar precios anuales
+        toggle?.classList.add('bg-gradient-to-r', 'from-[#3E37FC]', 'to-[#6B63FF]');
+        toggle?.classList.remove('bg-gray-300');
+        toggleButton?.classList.add('translate-x-9', 'sm:translate-x-11');
+        toggleButton?.classList.remove('translate-x-1');
+        monthlyLabel?.classList.add('text-[#010101]/70');
+        monthlyLabel?.classList.remove('text-[#010101]');
+        annualLabel?.classList.add('text-[#010101]');
+        annualLabel?.classList.remove('text-[#010101]/70');
+
+        monthlyPrices.forEach(el => el.classList.add('hidden'));
+        annualPrices.forEach(el => el.classList.remove('hidden'));
+
+        toggle?.setAttribute('aria-checked', 'true');
+      } else {
+        // Mostrar precios mensuales
+        toggle?.classList.remove('bg-gradient-to-r', 'from-[#3E37FC]', 'to-[#6B63FF]');
+        toggle?.classList.add('bg-gray-300');
+        toggleButton?.classList.remove('translate-x-9', 'sm:translate-x-11');
+        toggleButton?.classList.add('translate-x-1');
+        monthlyLabel?.classList.remove('text-[#010101]/70');
+        monthlyLabel?.classList.add('text-[#010101]');
+        annualLabel?.classList.remove('text-[#010101]');
+        annualLabel?.classList.add('text-[#010101]/70');
+
+        monthlyPrices.forEach(el => el.classList.remove('hidden'));
+        annualPrices.forEach(el => el.classList.add('hidden'));
+
+        toggle?.setAttribute('aria-checked', 'false');
+      }
+    };
+
+    toggle?.addEventListener('click', () => {
+      isAnnual = !isAnnual;
+      updatePricing();
+    });
+
+    // Inicializar
+    updatePricing();
+  });
+</script>

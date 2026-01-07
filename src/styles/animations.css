@@ -1,0 +1,452 @@
+/* Animaciones personalizadas adicionales */
+
+/* Estado inicial para elementos que se animarán */
+.scroll-reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animación de entrada desde diferentes direcciones */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animaciones con rotación */
+@keyframes rotateInLeft {
+  0% {
+    opacity: 0;
+    transform: rotate(-15deg) translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) translateX(0);
+  }
+}
+
+@keyframes rotateInRight {
+  0% {
+    opacity: 0;
+    transform: rotate(15deg) translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) translateX(0);
+  }
+}
+
+/* Animación de zoom in */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animación de flip */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+
+/* Clases de utilidad para diferentes tipos de entrada */
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.6s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+.animate-slide-in-top {
+  animation: slideInFromTop 0.6s ease-out forwards;
+}
+
+.animate-rotate-in-left {
+  animation: rotateInLeft 0.7s ease-out forwards;
+}
+
+.animate-rotate-in-right {
+  animation: rotateInRight 0.7s ease-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.5s ease-out forwards;
+}
+
+.animate-flip-in {
+  animation: flipIn 0.6s ease-out forwards;
+}
+
+/* Gradiente animado */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+/* Delay classes para animaciones escalonadas */
+.delay-100 {
+  animation-delay: 100ms !important;
+}
+
+.delay-200 {
+  animation-delay: 200ms !important;
+}
+
+.delay-300 {
+  animation-delay: 300ms !important;
+}
+
+.delay-400 {
+  animation-delay: 400ms !important;
+}
+
+.delay-500 {
+  animation-delay: 500ms !important;
+}
+
+.delay-600 {
+  animation-delay: 600ms !important;
+}
+
+.delay-700 {
+  animation-delay: 700ms !important;
+}
+
+.delay-800 {
+  animation-delay: 800ms !important;
+}
+
+.delay-900 {
+  animation-delay: 900ms !important;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms !important;
+}
+
+/* ...existing code... */
+
+
+/* Efecto de brillo en hover */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  filter: drop-shadow(0 0 20px rgba(62, 55, 252, 0.6));
+}
+
+/* Pulse personalizado para elementos importantes */
+@keyframes custom-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.animate-custom-pulse {
+  animation: custom-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Efecto de texto brillante */
+@keyframes text-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.text-shine {
+  background: linear-gradient(
+    90deg,
+    rgba(62, 55, 252, 1) 0%,
+    rgba(107, 99, 255, 1) 50%,
+    rgba(62, 55, 252, 1) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shine 3s linear infinite;
+}
+
+/* Efecto de ondas */
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 1.5s ease-out infinite;
+}
+
+/* Card flip effect */
+.card-flip {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-flip:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+/* Efecto de partículas */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(10px, -20px) scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-10px, -10px) scale(0.9);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(15px, 10px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.animate-particle {
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+/* Smooth reveal para scroll */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading spinner personalizado */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Efecto de destello */
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-flash {
+  animation: flash 2s ease-in-out infinite;
+}
+
+/* Bounce mejorado */
+@keyframes bounce-soft {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-soft {
+  animation: bounce-soft 2s infinite;
+}
+
+/* Efecto de ola */
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  40%, 60% {
+    transform: rotate(14deg);
+  }
+  50%, 70% {
+    transform: rotate(-8deg);
+  }
+  80% {
+    transform: rotate(14deg);
+  }
+  90% {
+    transform: rotate(-4deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+/* Transiciones suaves para todos los elementos interactivos */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto de levitación */
+@keyframes levitate {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-levitate {
+  animation: levitate 4s ease-in-out infinite;
+}
+
+/* Efecto de resplandor pulsante */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(62, 55, 252, 0.3),
+                0 0 10px rgba(62, 55, 252, 0.2),
+                0 0 15px rgba(62, 55, 252, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(62, 55, 252, 0.6),
+                0 0 30px rgba(62, 55, 252, 0.4),
+                0 0 40px rgba(62, 55, 252, 0.2);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Perspective effects */
+.perspective-card {
+  perspective: 1000px;
+}
+
+.perspective-card > * {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.perspective-card:hover > * {
+  transform: rotateX(5deg) rotateY(5deg);
+}
+
+/* Glass morphism con animación */
+.glass-morph {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-morph:hover {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-color: rgba(62, 55, 252, 0.3);
+}
+
