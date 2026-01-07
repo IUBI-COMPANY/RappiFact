@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Isotipo mini -->
+  <g transform="translate(10, 40)">
+    <!-- Líneas de velocidad -->
+    <rect x="0" y="45" width="20" height="6" rx="3" fill="#4F46E5"/>
+    <rect x="25" y="45" width="12" height="6" rx="3" fill="#4F46E5"/>
+
+    <!-- Documento -->
+    <rect x="40" y="10" width="80" height="80" rx="10" fill="none" stroke="#4F46E5" stroke-width="6"/>
+    <rect x="50" y="25" width="25" height="4" rx="2" fill="#4F46E5"/>
+    <rect x="50" y="35" width="40" height="4" rx="2" fill="#4F46E5"/>
+
+    <!-- Rayo -->
+    <path d="M 75 45 L 68 60 L 78 60 L 72 75 L 85 60 L 75 60 Z" fill="#4F46E5"/>
+
+    <!-- R -->
+    <path d="M 100 20 Q 130 20 135 35 Q 135 45 125 50 L 145 75 L 130 85 L 115 55 Q 120 52 120 45 Q 120 30 105 30 L 105 85 L 95 85 L 95 20 Z" fill="url(#logoGradient)"/>
+  </g>
+
+  <!-- Texto RappiFact -->
+  <g transform="translate(180, 100)">
+    <!-- Rappi (en azul) -->
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="900" fill="#4F46E5">Rappi</text>
+
+    <!-- Fact (en negro) -->
+    <text x="260" y="0" font-family="Inter, Arial, sans-serif" font-size="80" font-weight="900" fill="#1f2937">Fact</text>
+  </g>
+
+  <!-- Línea decorativa -->
+  <line x1="180" y1="120" x2="650" y2="120" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Subtítulo -->
+  <text x="180" y="155" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500" fill="#6b7280">
+    Facturación Electrónica Simple y Rápida
+  </text>
+</svg>
+

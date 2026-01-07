@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Patrón de puntos -->
+  <defs>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="white" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Círculos decorativos -->
+  <circle cx="150" cy="100" r="150" fill="white" opacity="0.05"/>
+  <circle cx="1050" cy="530" r="200" fill="white" opacity="0.05"/>
+
+  <!-- Isotipo grande centrado arriba -->
+  <g transform="translate(450, 80)">
+    <!-- Líneas de velocidad -->
+    <rect x="0" y="90" width="30" height="8" rx="4" fill="white" opacity="0.8"/>
+    <rect x="40" y="90" width="18" height="8" rx="4" fill="white" opacity="0.8"/>
+
+    <!-- Marco del documento -->
+    <rect x="70" y="30" width="120" height="180" rx="15" fill="none" stroke="white" stroke-width="10"/>
+
+    <!-- Líneas del documento -->
+    <rect x="90" y="55" width="35" height="5" rx="2.5" fill="white" opacity="0.9"/>
+    <rect x="90" y="75" width="70" height="5" rx="2.5" fill="white" opacity="0.9"/>
+
+    <!-- Rayo central -->
+    <path d="M 130 95 L 118 130 L 135 130 L 125 165 L 153 128 L 135 128 Z" fill="white"/>
+
+    <!-- Letra R -->
+    <path d="M 170 70 Q 210 70 215 95 Q 215 115 205 125 L 230 175 L 210 190 L 185 140 Q 195 135 195 120 Q 195 90 175 90 L 175 190 L 160 190 L 160 70 Z" fill="white"/>
+
+    <!-- Punto azul claro -->
+    <circle cx="205" cy="180" r="10" fill="#60a5fa"/>
+  </g>
+
+  <!-- Texto RappiFact -->
+  <text x="600" y="380" font-family="Inter, Arial, sans-serif" font-size="100" font-weight="900" fill="white" text-anchor="middle">
+    <tspan fill="white">Rappi</tspan><tspan fill="#e0e7ff">Fact</tspan>
+  </text>
+
+  <!-- Subtítulo -->
+  <text x="600" y="450" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="600" fill="white" opacity="0.9" text-anchor="middle">
+    Facturación Electrónica Simple y Rápida
+  </text>
+
+  <!-- Badge SUNAT -->
+  <g transform="translate(350, 500)">
+    <rect x="0" y="0" width="500" height="60" rx="30" fill="white" opacity="0.15"/>
+    <text x="250" y="40" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="white" text-anchor="middle">
+      ✓ Autorizado por SUNAT • ISO 27001
+    </text>
+  </g>
+</svg>
+
