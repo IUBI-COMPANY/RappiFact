@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { sitemap: 'sitemap-0' } },
+  ];
+}
+
+const siteUrl = 'https://rappifact.com';
+
+const pages = [
+  { url: '', changefreq: 'weekly', priority: '1.0', lastmod: '2026-01-09' },
+  { url: '/politica-de-privacidad', changefreq: 'monthly', priority: '0.5', lastmod: '2026-01-09' },
+  { url: '/terminos-y-condiciones', changefreq: 'monthly', priority: '0.5', lastmod: '2026-01-09' },
+];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${siteUrl}${page.url}</loc>
+    <lastmod>${page.lastmod}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+---
+
+{sitemap}
+

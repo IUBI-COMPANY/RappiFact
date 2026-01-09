@@ -2,44 +2,153 @@
 interface Props {
   title: string;
   description?: string;
+  canonical?: string;
+  image?: string;
+  noindex?: boolean;
 }
 
-const { title, description = "Sistema de Facturación Electrónica autorizado por SUNAT. Simple, rápido y sin contratos." } = Astro.props;
+const {
+  title,
+  description = "Sistema de facturación electrónica autorizado por SUNAT. Emite facturas, boletas y comprobantes desde S/. 120/mes. ✓ Sin contratos ✓ Sin instalación ✓ Prueba gratis 7 días",
+  canonical,
+  image = "/Logotipo con fondo blanco.png",
+  noindex = false
+} = Astro.props;
+
+const siteUrl = "https://rappifact.com";
+const fullUrl = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${Astro.url.pathname}`;
+const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="facturación electrónica, facturación electrónica Perú, SUNAT, emitir facturas, emitir boletas, sistema de facturación, facturación en línea, facturas electrónicas, software de facturación, RappiFact, comprobantes electrónicos, POS, punto de venta, facturación simple, facturación rápida" />
+    <meta name="author" content="IUBI GROUP SAC" />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+    <meta name="googlebot" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <meta name="language" content="Spanish" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={fullUrl} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/isotipo sin fondo.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Generator -->
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/Logotipo con fondo blanco.png" />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="RappiFact" />
+    <meta property="og:locale" content="es_PE" />
 
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={fullUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/Logotipo con fondo blanco.png" />
+    <meta name="twitter:image" content={ogImage} />
 
-    <title>{title}</title>
+    <!-- Business & Location -->
+    <meta name="geo.region" content="PE-LIM" />
+    <meta name="geo.placename" content="Chorrillos, Lima, Perú" />
+    <meta name="geo.position" content="-12.1692;-77.0156" />
+    <meta name="ICBM" content="-12.1692, -77.0156" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <!-- Animaciones personalizadas -->
-    <link rel="stylesheet" href="/src/styles/animations.css">
+    <link rel="stylesheet" href="/src/styles/animations.css" />
+
+    <!-- JSON-LD Structured Data - Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RappiFact",
+      "legalName": "IUBI GROUP SAC",
+      "url": siteUrl,
+      "logo": `${siteUrl}/logotipo.svg`,
+      "image": ogImage,
+      "description": description,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle las acacias 181",
+        "addressLocality": "Chorrillos",
+        "addressRegion": "Lima",
+        "postalCode": "15067",
+        "addressCountry": "PE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+51-913-346-183",
+        "contactType": "customer service",
+        "email": "soporte@rappifact.com",
+        "areaServed": "PE",
+        "availableLanguage": ["es"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      "sameAs": [
+        `https://wa.me/51913346183`
+      ],
+      "taxID": "20614191059",
+      "vatID": "20614191059"
+    })} />
+
+    <!-- JSON-LD Structured Data - SoftwareApplication -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "RappiFact",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Accounting Software",
+      "operatingSystem": "Web, iOS, Android, Windows",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "PEN",
+        "lowPrice": "120",
+        "highPrice": "170",
+        "offerCount": "3",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "29",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "description": description,
+      "provider": {
+        "@type": "Organization",
+        "name": "IUBI GROUP SAC"
+      },
+      "downloadUrl": siteUrl,
+      "featureList": "Facturación electrónica, Emisión de boletas, Emisión de facturas, Control de inventarios, Reportes, POS móvil"
+    })} />
   </head>
   <body class="font-sans antialiased">
     <slot />
