@@ -83,9 +83,14 @@ const plans: Plan[] = [
 ];
 
 // Calcular precios anuales (precio mensual x 12 con 25% de descuento)
+// Plan Empresarial tiene precio anual fijo de 1,536
 const calculateAnnualPrice = (monthlyPrice: string) => {
   const monthly = parseFloat(monthlyPrice);
-  const annual = (monthly * 12) * 0.75; // 25% descuento
+  // Caso especial para plan Empresarial (170 -> 1,536 anual)
+  if (monthly === 170) {
+    return "1536";
+  }
+  const annual = (monthly * 12) * 0.75; // 25% descuento para otros planes
   return annual.toFixed(0);
 };
 
