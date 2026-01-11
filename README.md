@@ -23,7 +23,7 @@ Landing page moderna y optimizada para conversiones del sistema de Facturación 
 ```
 /
 ├── public/
-│   └── favicon.svg
+│   └── favicon.png
 ├── src/
 │   ├── components/
 │   │   ├── Header.astro       # Navegación principal
