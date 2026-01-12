@@ -15,8 +15,8 @@ export interface Plan {
 const plans: Plan[] = [
   {
     name: "Básico",
-    price: "120",
-    oldPrice: "152",
+    price: "99",
+    oldPrice: "139",
     comprobantes: "1,000",
     sucursales: "1",
     almacenes: "1",
@@ -38,8 +38,8 @@ const plans: Plan[] = [
   },
   {
     name: "Emprendedor",
-    price: "160",
-    oldPrice: "200",
+    price: "149",
+    oldPrice: "199",
     popular: true,
     comprobantes: "3,000",
     sucursales: "2",
@@ -56,14 +56,13 @@ const plans: Plan[] = [
       "Traslado entre almacenes",
       "Guías de remisión",
       "Libros electrónicos",
-      "API REST",
-      "Dominio personalizado"
+      "API REST"
     ]
   },
   {
     name: "Empresarial",
-    price: "170",
-    oldPrice: "228",
+    price: "169",
+    oldPrice: "229",
     comprobantes: "6,000",
     sucursales: "Ilimitadas",
     almacenes: "Ilimitados",
@@ -75,29 +74,24 @@ const plans: Plan[] = [
       "Guías de remisión",
       "Libros electrónicos",
       "API REST",
-      "Dominio personalizado",
       "Integración con tienda virtual"
     ],
     notIncluded: []
   }
 ];
 
-// Calcular precios anuales (precio mensual x 12 con 25% de descuento)
-// Plan Empresarial tiene precio anual fijo de 1,536
+// Calcular precios anuales (precio mensual x 12 con 15% de descuento)
 const calculateAnnualPrice = (monthlyPrice: string) => {
   const monthly = parseFloat(monthlyPrice);
-  // Caso especial para plan Empresarial (170 -> 1,536 anual)
-  if (monthly === 170) {
-    return "1536";
-  }
-  const annual = (monthly * 12) * 0.75; // 25% descuento para otros planes
-  return annual.toFixed(0);
+  const annual = (monthly * 12) * 0.85; // 15% descuento
+  return Math.round(annual).toString();
 };
 
-const calculateAnnualOldPrice = (monthlyOldPrice: string) => {
-  const monthly = parseFloat(monthlyOldPrice);
+// El precio "Antes" anual es simplemente el precio mensual x 12 (sin descuento)
+const calculateAnnualOldPrice = (monthlyPrice: string) => {
+  const monthly = parseFloat(monthlyPrice);
   const annual = monthly * 12;
-  return annual.toFixed(0);
+  return Math.round(annual).toString();
 };
 ---
 
@@ -130,7 +124,7 @@ const calculateAnnualOldPrice = (monthlyOldPrice: string) => {
         <span class="text-base sm:text-lg font-semibold text-[#010101]/70" id="annual-label">
           Anual
           <span class="ml-2 inline-block bg-gradient-to-r from-[#3E37FC] to-[#2B25B8] text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
-            -25%
+            -15%
           </span>
         </span>
       </div>
@@ -173,9 +167,9 @@ const calculateAnnualOldPrice = (monthlyOldPrice: string) => {
                 </span>
               </div>
               <div class="text-sm sm:text-base text-[#010101]/60">
-                <span class="line-through">Antes S/. {calculateAnnualOldPrice(plan.oldPrice)}</span>
+                <span class="line-through">Antes S/. {calculateAnnualOldPrice(plan.price)}</span>
                 <span class="ml-2 text-[#3E37FC] font-semibold">
-                  Ahorra 25%
+                  Ahorra 15%
                 </span>
               </div>
               <div class="text-sm text-[#010101]/50 mt-1">
