@@ -1,21 +1,31 @@
 ---
 const modules = [
   {
+    title: "Emitir Factura",
+    description: "Busca clientes por RUC o DNI automáticamente y emite facturas en segundos. Los datos del cliente se completan al instante desde la SUNAT.",
+    media: "/emitirFactura.mp4",
+    isVideo: true,
+    features: ["Búsqueda automática por RUC/DNI", "Autocompletado de datos", "Emisión rápida y segura"]
+  },
+  {
     title: "Caja Chica",
     description: "Gestiona los gastos menores de tu empresa de forma organizada. Controla entradas, salidas y genera reportes detallados de movimientos.",
-    image: "/cajaChica.png",
+    media: "/cajaChica.png",
+    isVideo: false,
     features: ["Control de gastos diarios", "Reportes de movimientos", "Cuadre de caja automático"]
   },
   {
     title: "Entrenamiento",
     description: "Capacitación completa para ti y tu equipo. Aprende a usar todas las funcionalidades del sistema de manera rápida y efectiva.",
-    image: "/entrenamiento.png",
+    media: "/entrenamiento.png",
+    isVideo: false,
     features: ["Videos tutoriales", "Guías paso a paso", "Soporte en vivo"]
   },
   {
     title: "Personalizado",
     description: "Adapta el sistema a las necesidades específicas de tu negocio. Configura reportes, formatos y flujos de trabajo a tu medida.",
-    image: "/personalizado.png",
+    media: "/personalizado.png",
+    isVideo: false,
     features: ["Reportes personalizados", "Formatos de impresión", "Configuración flexible"]
   }
 ];
@@ -43,14 +53,29 @@ const modules = [
     <div class="max-w-7xl mx-auto space-y-12 sm:space-y-16">
       {modules.map((module, index) => (
         <div class={`scroll-reveal grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-          <!-- Image -->
+          <!-- Media (Video or Image) -->
           <div class={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-            <div class="rounded-3xl overflow-hidden shadow-[0_10px_50px_rgba(62,55,252,0.15)] border border-[#3E37FC]/10 bg-gradient-to-br from-[#f8f7ff] to-white p-3 sm:p-4 hover:shadow-[0_15px_60px_rgba(62,55,252,0.25)] transition-all duration-500 hover:-translate-y-1">
-              <img
-                src={module.image}
-                alt={`Módulo ${module.title} - RappiFact`}
-                class="w-full h-auto rounded-2xl"
-              />
+            <div class="rounded-3xl overflow-hidden shadow-[0_10px_50px_rgba(62,55,252,0.15)] border border-[#3E37FC]/10 bg-gradient-to-br from-[#f8f7ff] to-white hover:shadow-[0_15px_60px_rgba(62,55,252,0.25)] transition-all duration-500 hover:-translate-y-1">
+              {module.isVideo ? (
+                <video
+                  src={module.media}
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  disablepictureinpicture
+                  controlslist="nodownload nofullscreen noremoteplayback"
+                  class="w-full h-auto rounded-2xl shadow-lg"
+                >
+                  Tu navegador no soporta videos.
+                </video>
+              ) : (
+                <img
+                  src={module.media}
+                  alt={`Módulo ${module.title} - RappiFact`}
+                  class="w-full h-auto rounded-2xl"
+                />
+              )}
             </div>
           </div>
 
