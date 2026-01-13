@@ -15,8 +15,8 @@ export interface Plan {
 const plans: Plan[] = [
   {
     name: "Básico",
-    price: "99",
-    oldPrice: "139",
+    price: "59",
+    oldPrice: "89",
     comprobantes: "1,000",
     sucursales: "1",
     almacenes: "1",
@@ -38,8 +38,8 @@ const plans: Plan[] = [
   },
   {
     name: "Emprendedor",
-    price: "149",
-    oldPrice: "199",
+    price: "99",
+    oldPrice: "139",
     popular: true,
     comprobantes: "3,000",
     sucursales: "2",
@@ -61,8 +61,8 @@ const plans: Plan[] = [
   },
   {
     name: "Empresarial",
-    price: "169",
-    oldPrice: "229",
+    price: "119",
+    oldPrice: "169",
     comprobantes: "6,000",
     sucursales: "Ilimitadas",
     almacenes: "Ilimitados",
@@ -104,7 +104,6 @@ const calculateAnnualOldPrice = (monthlyPrice: string) => {
       <p class="text-lg sm:text-xl text-[#010101]/70 max-w-3xl mx-auto px-4">
         <span class="italic">Sin contratos de permanencia.</span> Comienza hoy y cancela cuando quieras.
       </p>
-
       <!-- Switch Mensual/Anual -->
       <div class="mt-8 flex items-center justify-center gap-4">
         <span class="text-base sm:text-lg font-semibold text-[#010101]" id="monthly-label">Mensual</span>
