@@ -1,7 +1,7 @@
 ---
 ---
 
-<section id="free-trial" class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#F8F7FF] to-white overflow-hidden relative">
+<section id="free-trial" class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#F8F7FF] to-white overflow-hidden relative" data-selected-plan="empresarial">
   <div class="absolute top-0 left-0 w-64 h-64 bg-[#3E37FC]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
   <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#3E37FC]/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
 
@@ -33,20 +33,22 @@
         <div class="relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <!-- Left Content -->
           <div>
-            <h3 class="text-2xl sm:text-3xl font-bold text-[#010101] mb-6">
-              ¿Qué incluye tu mes de prueba?
+            <h3 class="text-2xl sm:text-3xl font-bold text-[#010101] mb-4">
+              ¿Qué incluye tu mes de prueba del plan <span id="trial-plan-name" class="text-[#3E37FC]">Empresarial</span>?
             </h3>
-            <ul class="space-y-4">
+            <div class="mb-6 p-3 bg-[#3E37FC]/5 rounded-lg">
+              <p class="text-sm text-[#010101]/70">
+                <span class="font-semibold"><span id="trial-comprobantes">Hasta 6000 Comprobantes</span></span> durante tu periodo de prueba
+              </p>
+            </div>
+            <ul id="trial-features-list" class="space-y-4">
               <li class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-[#3E37FC]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg class="w-4 h-4 text-[#3E37FC]" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <div>
-                  <span class="font-semibold text-[#010101]">Acceso completo al sistema</span>
-                  <p class="text-sm text-[#010101]/60">Todas las funcionalidades sin restricciones</p>
-                </div>
+                <span class="text-sm text-[#010101]/80">Todo lo del plan Emprendedor</span>
               </li>
               <li class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-[#3E37FC]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -54,10 +56,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <div>
-                  <span class="font-semibold text-[#010101]">Hasta 6000 comprobantes gratis</span>
-                  <p class="text-sm text-[#010101]/60">Facturas, boletas y notas de crédito</p>
-                </div>
+                <span class="text-sm text-[#010101]/80">Reportes avanzados y personalizados</span>
               </li>
               <li class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-[#3E37FC]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -65,10 +64,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <div>
-                  <span class="font-semibold text-[#010101]">Soporte técnico</span>
-                  <p class="text-sm text-[#010101]/60">Te ayudamos en todo el proceso</p>
-                </div>
+                <span class="text-sm text-[#010101]/80">Traslado entre almacenes</span>
               </li>
               <li class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-[#3E37FC]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -76,10 +72,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <div>
-                  <span class="font-semibold text-[#010101]">Capacitación gratuita</span>
-                  <p class="text-sm text-[#010101]/60">Aprende a usar el sistema rápidamente</p>
-                </div>
+                <span class="text-sm text-[#010101]/80">Guías de remisión electrónicas</span>
               </li>
               <li class="flex items-start gap-3">
                 <div class="w-6 h-6 bg-[#3E37FC]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -87,12 +80,38 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <div>
-                  <span class="font-semibold text-[#010101]">Sin tarjeta de crédito</span>
-                  <p class="text-sm text-[#010101]/60">No pedimos datos de pago para empezar</p>
+                <span class="text-sm text-[#010101]/80">Libros electrónicos (PLE)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-[#3E37FC]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-[#3E37FC]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
                 </div>
+                <span class="text-sm text-[#010101]/80">API REST para integraciones</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-[#3E37FC]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-[#3E37FC]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-sm text-[#010101]/80">Usuarios ilimitados</span>
               </li>
             </ul>
+            <div class="mt-6 p-4 bg-gradient-to-r from-[#FFD700]/10 to-[#FFA500]/10 rounded-lg border border-[#FFD700]/30">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-[#FFD700]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+                <span class="font-semibold text-[#010101]">Extras incluidos:</span>
+              </div>
+              <ul class="text-sm text-[#010101]/70 space-y-1">
+                <li>✓ Soporte técnico</li>
+                <li>✓ Capacitación gratuita en vivo</li>
+                <li>✓ Sin tarjeta de crédito requerida</li>
+              </ul>
+            </div>
           </div>
 
           <!-- Right Content - CTA Box -->
@@ -109,13 +128,14 @@
               <div class="bg-white/10 rounded-xl p-4 mb-6">
                 <div class="text-sm text-white/80 mb-1">Valor de la prueba</div>
                 <div class="text-2xl font-bold">
-                  <span class="line-through text-white/50 mr-2">S/. 119</span>
+                  <span class="line-through text-white/50 mr-2">S/. <span id="trial-price">119</span></span>
                   <span class="text-[#FFD700]">GRATIS</span>
                 </div>
               </div>
 
               <a
-                href="https://wa.me/51913346183?text=Hola,%20quiero%20activar%20mi%20mes%20de%20prueba%20gratis%20en%20RappiFact"
+                id="trial-cta-button"
+                href="https://wa.me/51913346183?text=Hola,%20quiero%20activar%20mi%20mes%20de%20prueba%20gratis%20del%20plan%20Empresarial%20en%20RappiFact"
                 target="_blank"
                 class="group inline-flex items-center justify-center gap-2 bg-white text-[#3E37FC] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 transition-all hover:shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:scale-105 w-full"
               >
@@ -205,7 +225,14 @@
 
     // Actualizar los comprobantes
     const comprobantesEl = document.getElementById('trial-comprobantes');
-    if (comprobantesEl) comprobantesEl.textContent = plan.comprobantes;
+    const comprobantesContainer = comprobantesEl?.parentElement;
+    if (comprobantesEl && comprobantesContainer) {
+      if (plan.comprobantes === 'Ilimitados') {
+        comprobantesContainer.innerHTML = `<span class="font-semibold"><span id="trial-comprobantes">Hasta 6000 Comprobantes</span></span>`;
+      } else {
+        comprobantesContainer.innerHTML = `<span class="font-semibold">Hasta <span id="trial-comprobantes">${plan.comprobantes}</span> comprobantes</span> durante tu periodo de prueba`;
+      }
+    }
 
     // Actualizar el precio
     const priceEl = document.getElementById('trial-price');
@@ -261,9 +288,9 @@
       });
     });
 
-    // Inicializar con el plan por defecto (emprendedor)
+    // Inicializar con el plan por defecto (empresarial)
     const section = document.getElementById('free-trial');
-    const defaultPlan = section?.getAttribute('data-selected-plan') || 'emprendedor';
+    const defaultPlan = section?.getAttribute('data-selected-plan') || 'empresarial';
     updateTrialContent(defaultPlan);
   });
 </script>
