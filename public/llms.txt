@@ -1,0 +1,100 @@
+# RappiFact - Sistema de Facturación Electrónica
+
+> Sistema de facturación electrónica autorizado por SUNAT para empresas en Perú. Emite facturas, boletas y comprobantes electrónicos desde S/. 59/mes. Sin contratos, sin instalación, 100% en la nube.
+
+## Información General
+
+- **Nombre**: RappiFact
+- **URL**: https://rappifact.com
+- **Tipo**: SaaS (Software como Servicio)
+- **Industria**: Facturación Electrónica / FinTech
+- **País**: Perú
+- **Idioma Principal**: Español
+
+## Empresa
+
+- **Razón Social**: IUBI GROUP SAC
+- **RUC**: 20614191059
+- **Dirección**: Calle las acacias 181, Chorrillos, Lima, Perú
+- **Teléfono/WhatsApp**: +51 913 346 183
+- **Email**: soporte@rappifact.com
+
+## Certificaciones
+
+- Autorizado por SUNAT (Resolución N° 064-005-0002737)
+- Certificación ISO 27001 en Seguridad de la Información
+- Datos alojados en AWS (Amazon Web Services)
+
+## Planes y Precios
+
+### Plan Básico - S/. 59/mes
+- 1,000 comprobantes
+- 1 sucursal, 1 almacén, 1 usuario
+- Módulo de ventas
+- Reportes básicos
+- Búsqueda de RUC y DNI
+
+### Plan Emprendedor - S/. 99/mes (Más Popular)
+- 3,000 comprobantes
+- 2 sucursales, 2 almacenes, 3 usuarios
+- Todo lo del plan Básico
+- Módulo de compras
+- Kardex físico y valorizado
+
+### Plan Empresarial - S/. 119/mes
+- 6,000 comprobantes
+- Sucursales, almacenes y usuarios ilimitados
+- Todo lo del plan Emprendedor
+- Guías de remisión
+- Libros electrónicos (PLE)
+- API REST
+
+## Características Principales
+
+- Emisión de facturas y boletas electrónicas
+- Notas de crédito y débito
+- Cotizaciones y proformas
+- Guías de remisión electrónicas
+- Búsqueda automática por RUC/DNI
+- Punto de venta integrado
+- Control de inventario y kardex
+- Reportes en tiempo real
+- Envío por email y WhatsApp
+- Firma XML y envío a SUNAT
+- Libros electrónicos (PLE)
+- API REST para integraciones
+
+## Beneficios
+
+- Activación inmediata
+- 100% seguro con certificación ISO 27001
+- Sin contratos de permanencia
+- Multiplataforma (PC, tablet, celular)
+- Soporte técnico incluido
+- Reportes en tiempo real
+- 1 mes de prueba gratis
+
+## Páginas
+
+- [/](https://rappifact.com/) - Página principal
+- [/politica-de-privacidad](https://rappifact.com/politica-de-privacidad) - Política de privacidad
+- [/terminos-y-condiciones](https://rappifact.com/terminos-y-condiciones) - Términos y condiciones
+
+## Tecnología
+
+- Astro (Framework web)
+- Tailwind CSS
+- TypeScript
+- Alojado en la nube
+
+## Contacto
+
+Para consultas comerciales, soporte técnico o demostraciones:
+- WhatsApp: +51 913 346 183
+- Email: soporte@rappifact.com
+- Demo: https://rappifact.com/facturacionv9/registro
+
+## Opcional
+
+- [llms-full.txt](https://rappifact.com/llms-full.txt) - Documentación técnica completa
+

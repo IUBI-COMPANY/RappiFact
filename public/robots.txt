@@ -4,6 +4,11 @@ Allow: /
 # Sitemap
 Sitemap: https://rappifact.com/sitemap-index.xml
 
+# LLMs.txt - AI/LLM readable content
+# For more info: https://llmstxt.org/
+# llms.txt: https://rappifact.com/llms.txt
+# llms-full.txt: https://rappifact.com/llms-full.txt
+
 # Disallow admin and private pages
 Disallow: /api/
 Disallow: /admin/

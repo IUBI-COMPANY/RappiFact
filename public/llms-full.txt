@@ -1,0 +1,499 @@
+# RappiFact - Documentación Completa para LLMs
+
+> Sistema de facturación electrónica autorizado por SUNAT para empresas en Perú. Plataforma SaaS completa para emisión de comprobantes electrónicos, gestión de inventario, punto de venta y contabilidad.
+
+---
+
+## 1. INFORMACIÓN DEL SITIO WEB
+
+### Datos Generales
+- **Nombre del Producto**: RappiFact
+- **URL Principal**: https://rappifact.com
+- **Tipo de Producto**: SaaS (Software as a Service)
+- **Industria**: Facturación Electrónica / FinTech / Software Empresarial
+- **Mercado Objetivo**: Perú
+- **Idioma**: Español (es-PE)
+- **Moneda**: Soles Peruanos (PEN / S/.)
+
+### Empresa Propietaria
+- **Razón Social**: IUBI GROUP SAC
+- **RUC**: 20614191059
+- **Dirección Legal**: Calle las acacias 181, Chorrillos, Lima, Perú
+- **Código Postal**: 15067
+- **Coordenadas**: -12.1692, -77.0156
+- **Teléfono**: +51 913 346 183
+- **Email de Soporte**: soporte@rappifact.com
+
+### Certificaciones y Autorizaciones
+1. **SUNAT**: Autorizado como Operador de Servicios Electrónicos (OSE)
+   - Resolución: N° 064-005-0002737
+   - Permite emisión de comprobantes electrónicos válidos ante SUNAT
+2. **ISO 27001**: Certificación en Seguridad de la Información
+   - Garantiza protección de datos empresariales
+3. **Infraestructura AWS**: Datos alojados en Amazon Web Services
+   - Alta disponibilidad y respaldo diario
+
+---
+
+## 2. PROPUESTA DE VALOR
+
+### Problema que Resuelve
+RappiFact soluciona la complejidad de la facturación electrónica obligatoria en Perú, permitiendo a empresas de todos los tamaños cumplir con la normativa SUNAT sin necesidad de:
+- Comprar software costoso
+- Contratar personal técnico especializado
+- Realizar instalaciones complejas
+- Firmar contratos de permanencia
+
+### Beneficios Principales
+
+#### Activación Inmediata
+- No requiere instalación de software
+- Sistema 100% en la nube
+- Acceso desde cualquier navegador web
+- Operativo en minutos
+
+#### Seguridad Garantizada
+- Certificación ISO 27001
+- Encriptación de datos end-to-end
+- Respaldos automáticos diarios
+- Infraestructura AWS
+
+#### Sin Compromisos
+- Sin contratos de permanencia
+- Pago mensual o anual
+- Cancelación sin penalidades
+- Migración de datos incluida
+
+#### Multiplataforma
+- Funciona en computadoras
+- Compatible con tablets
+- Optimizado para smartphones
+- Diseño responsivo
+
+#### Soporte Técnico
+- Asistencia por WhatsApp
+- Soporte en español
+- Capacitación incluida
+- Documentación completa
+
+#### Reportes en Tiempo Real
+- Dashboard actualizado
+- Métricas de ventas
+- Control de inventario
+- Exportación Excel/PDF
+
+---
+
+## 3. PLANES Y PRECIOS
+
+### Plan Básico
+- **Precio Mensual**: S/. 59 (antes S/. 89)
+- **Precio Anual**: S/. 602 (15% descuento)
+- **Comprobantes**: 1,000 por mes
+- **Sucursales**: 1
+- **Almacenes**: 1
+- **Usuarios**: 1
+
+**Características Incluidas**:
+- Módulo de ventas
+- Reportes básicos
+- Búsqueda de RUC y DNI
+- Duplicar y copiar documentos
+- Emisión de facturas y boletas
+- Notas de crédito
+- Cotizaciones
+
+**No Incluido**:
+- Módulo de compras
+- Búsqueda de comprobantes
+- Kardex
+- Guías de remisión
+- Libros electrónicos
+- API REST
+
+### Plan Emprendedor (Más Popular)
+- **Precio Mensual**: S/. 99 (antes S/. 139)
+- **Precio Anual**: S/. 1,010 (15% descuento)
+- **Comprobantes**: 3,000 por mes
+- **Sucursales**: 2
+- **Almacenes**: 2
+- **Usuarios**: 3
+
+**Características Incluidas**:
+- Todo lo del plan Básico
+- Módulo de compras
+- Búsqueda de comprobantes
+- Kardex físico y valorizado
+- Ingresos y salidas de almacén
+- Gestión de proveedores
+- Control de gastos
+- Cuentas por pagar
+
+**No Incluido**:
+- Traslado entre almacenes
+- Guías de remisión
+- Libros electrónicos
+- API REST
+
+### Plan Empresarial
+- **Precio Mensual**: S/. 119 (antes S/. 169)
+- **Precio Anual**: S/. 1,214 (15% descuento)
+- **Comprobantes**: 6,000 por mes
+- **Sucursales**: Ilimitadas
+- **Almacenes**: Ilimitados
+- **Usuarios**: Ilimitados
+
+**Características Incluidas**:
+- Todo lo del plan Emprendedor
+- Reportes avanzados
+- Traslado entre almacenes
+- Guías de remisión electrónicas
+- Libros electrónicos (PLE)
+- API REST
+- Integración con tienda virtual
+
+---
+
+## 4. MÓDULOS DEL SISTEMA
+
+### 4.1 Módulo de Ventas
+Gestión completa del proceso de ventas y emisión de comprobantes.
+
+**Documentos Soportados**:
+- Facturas electrónicas
+- Boletas de venta electrónicas
+- Notas de crédito
+- Notas de débito
+- Cotizaciones/Proformas
+- Guías de remisión
+
+**Funcionalidades**:
+- Búsqueda automática por RUC/DNI desde SUNAT
+- Autocompletado de datos del cliente
+- Duplicar documentos existentes
+- Envío directo a SUNAT
+- Firma digital XML
+- Generación de CDR
+- Envío por email y WhatsApp
+- Impresión de tickets y A4
+- Control de pagos pendientes
+
+### 4.2 Módulo de Compras
+Registro y control de compras a proveedores.
+
+**Funcionalidades**:
+- Registro de compras
+- Búsqueda de proveedores por RUC/DNI
+- Gestión de proveedores
+- Control de gastos
+- Cuentas por pagar
+- Historial de compras
+
+### 4.3 Módulo de Inventario
+Control completo del stock y movimientos de almacén.
+
+**Funcionalidades**:
+- Stock en tiempo real
+- Kardex físico y valorizado
+- Entradas y salidas de almacén
+- Traslado entre almacenes
+- Importación masiva de productos
+- Alertas de stock mínimo
+- Categorización de productos
+- Precios por lista
+
+### 4.4 Módulo de Contabilidad
+Generación de libros electrónicos según normativa SUNAT.
+
+**Funcionalidades**:
+- Libro de ventas electrónico
+- Libro de compras electrónico
+- Exportación en formato Excel
+- Exportación en formato TXT (PLE)
+- Compatible con SUNAT
+- Reportes avanzados
+- Filtros por período
+
+### 4.5 Punto de Venta (POS)
+Sistema de punto de venta intuitivo para retail.
+
+**Funcionalidades**:
+- Interfaz táctil optimizada
+- Ventas rápidas
+- Control de caja
+- Cortes de caja
+- Múltiples formas de pago
+- Impresión de tickets
+- Integración con inventario
+
+### 4.6 Reportes y Dashboard
+Panel de control con métricas en tiempo real.
+
+**Tipos de Reportes**:
+- Ventas por período
+- Productos más vendidos
+- Clientes frecuentes
+- Inventario valorizado
+- Cuentas por cobrar
+- Cuentas por pagar
+- Flujo de caja
+
+---
+
+## 5. CARACTERÍSTICAS TÉCNICAS
+
+### Arquitectura
+- **Tipo**: Aplicación web SaaS
+- **Frontend**: JavaScript moderno
+- **Diseño**: Responsivo (Mobile-first)
+- **Acceso**: Navegador web (Chrome, Firefox, Safari, Edge)
+
+### Seguridad
+- Encriptación SSL/TLS
+- Autenticación segura
+- Sesiones con timeout
+- Logs de auditoría
+- Respaldos automáticos
+
+### Integraciones
+- **API REST**: Disponible en plan Empresarial
+- **Webhooks**: Para notificaciones
+- **SUNAT**: Conexión directa para validación
+- **Email**: Envío automático de comprobantes
+- **WhatsApp**: Compartir documentos
+
+### Compatibilidad
+- Chrome 80+
+- Firefox 75+
+- Safari 13+
+- Edge 80+
+- Opera 67+
+
+---
+
+## 6. PREGUNTAS FRECUENTES (FAQ)
+
+### ¿Tiene costo de instalación?
+No, RappiFact es 100% en la nube. No requiere compra de equipos ni instalaciones complejas. Solo necesitas un navegador web y conexión a internet para comenzar a facturar.
+
+### ¿Puedo continuar con mi numeración actual?
+Sí, puedes continuar con tu numeración existente de facturas y boletas sin ningún problema. Te ayudamos en el proceso de migración.
+
+### ¿Es obligatorio firmar contrato?
+No, no existen contratos que obliguen a permanencia. Puedes cancelar el servicio cuando lo desees sin penalizaciones ni cargos adicionales.
+
+### ¿Puedo personalizar con mi marca?
+Sí, en todos los planes puedes personalizar el sistema con tu propia marca, la cual se mostrará en todos los comprobantes que generes: facturas, boletas, cotizaciones, notas de venta y más.
+
+### ¿Qué tan seguro es el sistema?
+RappiFact cuenta con certificación ISO 27001 en seguridad de la información y está autorizado por SUNAT (Resolución N° 064-005-0002737). Todos los datos están encriptados y respaldados diariamente.
+
+### ¿Incluye soporte técnico?
+Sí, todos los planes incluyen soporte técnico. Nuestro equipo está disponible para ayudarte con cualquier consulta o problema que tengas con el sistema.
+
+### ¿Puedo acceder desde mi celular?
+Sí, RappiFact es completamente responsivo y funciona en cualquier dispositivo: PC, tablet o smartphone. Gestiona tu negocio desde donde estés.
+
+### ¿Qué métodos de pago aceptan?
+Aceptamos transferencias bancarias y Yape. El proceso de pago es seguro y puedes realizar el pago mensual o anual según tu preferencia.
+
+### ¿Ofrecen periodo de prueba?
+Sí, ofrecemos 1 mes de prueba gratis del plan Empresarial con todas las funcionalidades, sin necesidad de tarjeta de crédito.
+
+### ¿Cuántos comprobantes puedo emitir?
+Depende del plan:
+- Básico: 1,000 comprobantes/mes
+- Emprendedor: 3,000 comprobantes/mes
+- Empresarial: 6,000 comprobantes/mes
+
+---
+
+## 7. ESTRUCTURA DEL SITIO WEB
+
+### Páginas Principales
+
+#### Página de Inicio (/)
+- Hero con propuesta de valor
+- Beneficios del sistema
+- Funcionalidades por módulo
+- Módulos del sistema con demos en video
+- Partners y certificaciones
+- Planes y precios
+- Mes de prueba gratis
+- Testimonios de clientes
+- Preguntas frecuentes
+- Call to action
+
+#### Política de Privacidad (/politica-de-privacidad)
+- Información del responsable del tratamiento
+- Datos que se recopilan
+- Finalidad del tratamiento
+- Base legal
+- Derechos del usuario
+- Seguridad de datos
+- Cookies
+- Actualizaciones de la política
+
+#### Términos y Condiciones (/terminos-y-condiciones)
+- Identificación del proveedor
+- Descripción del servicio
+- Registro y cuenta de usuario
+- Uso del servicio
+- Pagos y facturación
+- Propiedad intelectual
+- Limitación de responsabilidad
+- Resolución de disputas
+
+### Sitemap
+- /sitemap-index.xml
+- /sitemap-0.xml
+
+### Archivos Técnicos
+- /robots.txt
+- /llms.txt
+- /llms-full.txt
+
+---
+
+## 8. INFORMACIÓN LEGAL
+
+### Protección de Datos
+RappiFact cumple con la Ley de Protección de Datos Personales del Perú (Ley N° 29733) y su reglamento. Los usuarios tienen derecho a:
+- Acceso a sus datos
+- Rectificación de información
+- Cancelación de datos
+- Oposición al tratamiento
+
+### Propiedad Intelectual
+- RappiFact es marca registrada de IUBI GROUP SAC
+- Todo el contenido está protegido por derechos de autor
+- El software está protegido por licencia propietaria
+
+### Jurisdicción
+- Ley aplicable: Perú
+- Tribunales competentes: Lima, Perú
+
+---
+
+## 9. CONTACTO Y SOPORTE
+
+### Canales de Atención
+1. **WhatsApp**: +51 913 346 183
+   - Consultas comerciales
+   - Soporte técnico
+   - Agendar demostraciones
+
+2. **Email**: soporte@rappifact.com
+   - Soporte técnico
+   - Facturación
+   - Consultas generales
+
+3. **Demo Online**: https://rappifact.com/facturacionv9/registro
+   - Prueba gratuita
+   - Sin tarjeta de crédito
+
+### Horario de Atención
+- Lunes a Viernes: 9:00 AM - 6:00 PM (Hora Lima)
+- Soporte por WhatsApp: Respuesta en horario laboral
+
+---
+
+## 10. TECNOLOGÍA DEL SITIO
+
+### Stack Tecnológico
+- **Framework**: Astro v5.x
+- **Estilos**: Tailwind CSS v3.x
+- **Lenguaje**: TypeScript
+- **Build Tool**: Vite
+- **Hosting**: Cloud-based
+
+### Optimizaciones
+- Score Lighthouse: 100/100
+- Lazy loading de imágenes
+- Fonts preconectadas
+- CSS crítico inline
+- JavaScript async
+
+### SEO Implementado
+- Meta tags completos
+- Open Graph tags
+- Twitter Cards
+- Schema.org (Organization, SoftwareApplication, FAQPage)
+- Canonical URLs
+- Sitemap XML
+- Robots.txt
+- llms.txt
+
+---
+
+## 11. PALABRAS CLAVE PRINCIPALES
+
+### Keywords Primarias
+- facturación electrónica Perú
+- facturación electrónica SUNAT
+- sistema de facturación
+- emitir facturas electrónicas
+- emitir boletas electrónicas
+- software de facturación
+
+### Keywords Secundarias
+- comprobantes electrónicos Perú
+- facturación en la nube
+- POS facturación
+- punto de venta con facturación
+- guías de remisión electrónicas
+- libros electrónicos SUNAT
+- kardex valorizado
+
+### Keywords Long-tail
+- sistema de facturación electrónica barato Perú
+- facturación electrónica sin contratos
+- software facturación SUNAT autorizado
+- cómo emitir facturas electrónicas
+- mejor sistema de facturación para pymes
+- facturación electrónica desde celular
+
+---
+
+## 12. COMPETENCIA Y DIFERENCIADORES
+
+### Ventajas Competitivas
+1. **Precio accesible**: Desde S/. 59/mes
+2. **Sin contratos**: Máxima flexibilidad
+3. **Prueba gratis**: 1 mes completo
+4. **Soporte en español**: Equipo local
+5. **Multiplataforma**: PC, tablet y celular
+6. **Certificación SUNAT**: Autorización oficial
+7. **ISO 27001**: Seguridad garantizada
+
+### Público Objetivo
+- Microempresas peruanas
+- Pequeñas empresas (PYMES)
+- Medianas empresas
+- Emprendedores
+- Negocios retail
+- Servicios profesionales
+- Comercios
+
+---
+
+## 13. MÉTRICAS Y ESTADÍSTICAS
+
+### Estadísticas del Servicio
+- +29 empresas activas
+- +1,000 facturas procesadas
+- Soporte 24/7
+- 100% uptime objetivo
+
+### Métricas de Confianza
+- Sistema autorizado SUNAT
+- Certificación ISO 27001
+- Infraestructura AWS
+- Respaldo diario de datos
+
+---
+
+*Documento generado para optimización de IA y LLMs*
+*Última actualización: Enero 2026*
+*RappiFact - IUBI GROUP SAC*
+
